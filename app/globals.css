@@ -92,7 +92,7 @@ svg { width: 1.25rem; height: 1.25rem; }
 
 /* Supplied logo shown through a non-destructive crop. */
 .brand { display: block; width: 166px; height: 42px; overflow: hidden; border-radius: 3px; background: #06050e; }
-.brand__asset { display: block; width: 228px; height: 114px; margin: -37px 0 0 -34px; background: url("/codense-logo.png") center/100% 100% no-repeat; }
+.brand__asset { display: block; width: 228px; height: 114px; margin: -37px 0 0 -34px; background-position: center; background-size: 100% 100%; background-repeat: no-repeat; }
 .brand--compact { width: 142px; height: 36px; }
 .brand--compact .brand__asset { width: 195px; height: 97.4px; margin: -31.5px 0 0 -29px; }
 
