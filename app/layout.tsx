@@ -1,10 +1,45 @@
 import type { Metadata } from "next";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/config/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Codense — Custom AI Agents for Business",
-  description:
-    "Codense builds custom AI agents designed around real business workflows, from customer support and sales to operations and automation.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Codense",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: "/codense-logo.png",
+        width: 1776,
+        height: 887,
+        alt: "Codense",
+      },
+    ],
+  },
+  icons: {
+    icon: [{ url: "/codense-logo.png", type: "image/png" }],
+    shortcut: "/codense-logo.png",
+    apple: "/codense-logo.png",
+  },
 };
 
 const themeScript = `
